@@ -4,6 +4,7 @@
     color: black;
     box-sizing: border-box;
     font-family: serif, sans-serif;
+    list-style: none;
 }
 header {
     display: flex;
@@ -76,6 +77,63 @@ article div{
     display: flex;
     flex-direction: column;
 }
+.minor-wishlist{
+    background-color: #ffe6e3;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.minor-wishlist *{
+    font-family: 'Montserrat', serif, sans-serif;
+}   
+.minor-wishlist div{
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+#submit-button{
+    padding: 5px;
+}
+#item{
+    padding: 5px;
+}
+.list-group-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black solid;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+.list-group-item:first-child{
+    margin-top: 20px;
+}
+.list-group-item:last-child{
+    margin-bottom: 0;
+}
+.list-group-item:hover, .list-group-item:hover span{
+    background-color: rgb(189, 188, 188);
+    color: white;
+}
+.list-group-item button{
+    cursor: pointer;
+    background-color: rgb(245, 139, 139);
+    padding: 10px;
+    border: 1px solid;
+}
+.list-group-item button:hover{
+    background-color: red;
+}
+.minor-wishlist .checked{
+    background-color: rgb(132, 132, 132);
+}
+.minor-wishlist .checked span{
+    text-decoration: line-through;
+    color: white;
+}
 footer{
     display: flex;
     flex-direction: column;
@@ -125,6 +183,25 @@ footer h2{
     *{
         color: white;
     }
+    .minor-wishlist{
+        background-color: #22294a;  
+    }
+    .list-group-item{
+        border: 1px solid white;
+    }
+    .list-group-item button, .minor-wishlist .checked span, #addForm *{
+        color: black;
+    }
+    .list-group-item:hover, .list-group-item:hover span{
+        background-color: #858585;
+        color: black;
+    }
+    .minor-wishlist .checked{
+        background-color: rgb(169, 167, 167);
+    }
+    #addForm{
+        color: bl;
+    }
     header {
         background-color: #ffe6e3;
     }
@@ -157,8 +234,18 @@ footer h2{
     }
 }
 @media only screen and (max-width: 600px){
-    .sections{
-        flex-direction: column;
+    .minor-wishlist{
+        width: 90%;
+    }
+    #addForm{
+        display: flex;
+    }
+    #addForm #submit-button{
+        width: 50px;
+    }
+    #addForm #item{
+        width: 100%;
+        margin-right: 10px;
     }
     .sections section{
         padding: 10px;
@@ -182,9 +269,6 @@ footer h2{
     }
     header h1.yellowtail{
         margin: 0px;
-    }
-    body{
-        padding-top: 60px;
     }
     article{
         padding: 30px;
